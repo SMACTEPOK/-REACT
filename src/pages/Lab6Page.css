@@ -1,0 +1,46 @@
+.lab-page { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+.lab-header { margin-bottom: 40px; border-bottom: 4px solid var(--color-border); padding-bottom: 20px; }
+.lab-title { font-family: var(--font-body); font-size: clamp(40px, 8vw, 80px); line-height: 0.9; margin: 0 0 16px; color: var(--color-white); text-shadow: 6px 6px 0 var(--color-shadow); }
+.lab-subtitle { font-family: var(--font-mono); color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+
+.lab-card { background: var(--color-surface); border: 3px solid var(--color-border); box-shadow: 8px 8px 0 var(--color-shadow); padding: 24px; }
+.lab-card__title { margin: 0 0 24px; font-family: var(--font-body); font-size: 24px; color: var(--color-white); text-transform: uppercase; border-bottom: 2px dashed var(--color-border); padding-bottom: 12px; }
+
+/* Форми та контроли */
+.add-form { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 2px dashed var(--color-border); align-items: center; }
+.lab-input { font-family: var(--font-mono); background: var(--color-background); border: 2px solid var(--color-border); color: var(--color-white); padding: 10px; outline: none; }
+.lab-input:focus { border-color: var(--color-white); }
+.checkbox-label { display: flex; align-items: center; gap: 8px; color: var(--color-text); font-family: var(--font-mono); font-size: 13px; cursor: pointer; }
+.btn { font-family: var(--font-mono); font-size: 12px; font-weight: 700; text-transform: uppercase; background: var(--color-ink); color: var(--color-white); border: 2px solid var(--color-border); padding: 10px 16px; cursor: pointer; box-shadow: 3px 3px 0 var(--color-shadow); transition: all .1s; }
+.btn:hover:not(:disabled) { background: var(--color-white); color: var(--color-ink); border-color: var(--color-white); transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--color-shadow); }
+.btn--small { padding: 6px 10px; font-size: 11px; }
+.btn--danger:hover { background: var(--color-danger); color: var(--color-white); border-color: var(--color-danger); }
+
+.controls-bar { display: flex; gap: 12px; margin-bottom: 30px; }
+
+/* Групи */
+.groups-container { display: flex; flex-direction: column; gap: 20px; }
+.category-group { border: 2px solid var(--color-border); background: var(--color-background); }
+.category-header { width: 100%; display: flex; justify-content: space-between; align-items: center; background: var(--color-concrete); color: var(--color-white); border: none; border-bottom: 2px solid var(--color-border); padding: 12px 16px; font-family: var(--font-mono); font-size: 16px; font-weight: 700; text-transform: uppercase; cursor: pointer; text-align: left; }
+.category-header:hover { background: var(--color-border); }
+.category-count { background: var(--color-white); color: var(--color-ink); padding: 2px 8px; font-size: 12px; }
+
+/* Елементи списку */
+.product-list { list-style: none; margin: 0; padding: 0; }
+.product-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--color-border); transition: background .2s; }
+.product-item:last-child { border-bottom: none; }
+.product-item:hover { background: rgba(255,255,255,0.03); }
+.product-item--out .product-item__name, .product-item--out .product-item__price { color: var(--color-muted); text-decoration: line-through; }
+
+.product-item__info { display: flex; gap: 16px; align-items: center; flex: 1; }
+.product-item__name { font-weight: 700; color: var(--color-white); flex: 2; }
+.product-item__price { font-family: var(--font-mono); color: var(--color-white); flex: 1; }
+.product-item__status { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; padding: 4px 8px; border: 1px solid var(--color-border); color: var(--color-muted); }
+.product-item__actions { display: flex; gap: 8px; }
+
+/* Режим редагування */
+.product-item--editing { background: var(--color-surface); padding: 16px; }
+.product-item__edit-form { display: flex; gap: 10px; width: 100%; align-items: center; flex-wrap: wrap; }
+.product-item__edit-form .lab-input { flex: 1; }
+
+.empty-state { color: var(--color-muted); font-family: var(--font-mono); text-align: center; padding: 20px; }
